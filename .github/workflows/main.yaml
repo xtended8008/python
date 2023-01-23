@@ -16,5 +16,12 @@ jobs:
 
 
     steps:
-      - run: ping 192.168.0.222
-      
+#      - run: ping -c 4 192.168.0.222
+#      - run: 
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
