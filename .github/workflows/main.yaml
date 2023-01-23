@@ -17,7 +17,6 @@ jobs:
     steps:
 #      - run: ping -c 4 192.168.0.222
 #      - run: 
-    steps:
       -
         name: Checkout
         uses: actions/checkout@v3
